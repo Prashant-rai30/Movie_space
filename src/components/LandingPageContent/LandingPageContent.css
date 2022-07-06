@@ -1,47 +1,40 @@
-.LandingPage_container {
-    background-color: #96DED1;
-    height: 730px;
-   
-
+.landingpagecontent_container {
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: aqua;
 }
-
-.LandingPage_container_title {
+.landingpagecontent_title {
     font-size: 35px;
-    font-weight: bold;
-
-
+    font-weight: 700;
 }
-
-.LandingPage_container_subtitle {
+.landingpagecontent_subtitle {
     font-size: 28px;
-    font-weight: bold;
-    margin: 8px 0;
+    font-weight: 500;
+    margin: 10px 0;
 }
-
-.LandingPage_container_des {
-    margin-bottom: 10px;
-    font-size: 20px;
+.landingpagecontent_description {
+    font-size: 19px;
 }
-
-.landing_input>input {
-    height: 31px;
-    width: 310px;
-}
-
-.landing_input {
-    width: 500px;
+.landingpagecontent_email_button {
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px 0;
 }
-
-.landing_input>button {
+.landingpagecontent_email_button > input {
+    height: 34px;
+    width: 300px;
+    background-color: whitesmoke;
+    border: none;
+}
+.landingpagecontent_email_button > button {
     height: 37px;
-    width: 130px;
-    padding: 0 15px;
+    padding: 8px 18px;
+    background-color: black;
+    color: aqua;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
 }

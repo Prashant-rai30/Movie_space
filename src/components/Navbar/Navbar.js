@@ -1,21 +1,27 @@
-import React from 'react'
-import './Navbar.css'
-import navbar from "../../images/Navbar/logo.png"
-import { useNavigate } from "react-router-dom"
-function Navbar({ showSignInButton }) {
-    const navigate = useNavigate() //given by react router dom to navigate and change url
+import React from "react";
+import img from "../../images/favicon/img.png";
+import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
+import Button from "../../global/Button/Button";
 
-    function goToSignInPage(showSignInButton) {
-        navigate("/sign-in") //same as useNavigate
+function Navbar({ showSignInButton, showInput }) {
+  const navigate = useNavigate();
 
-    }
+  function redirectTo(path) {
+    navigate(path);
+  }
 
-    return (
-        <div className='navbar_container'>
-            <img className='navbar_image' src={navbar} alt="logo" />
-            {showSignInButton === false ? " " : <button className='navbar_button' onClick={goToSignInPage}>Sign In</button>}
-        </div>
-    )
+  return (
+    <div className="navbar_container">
+      <img src={img} alt="logo" onClick={() => redirectTo("/")} />
+      {showSignInButton === false ? (
+        ""
+      ) : (
+          <Button text="Sign In" onClicking={() => redirectTo("/signin-signup")} />
+      )}
+      {showInput && <div className="navbar_inputfield"><input placeholder="Search movies" /></div> }
+    </div>
+  );
 }
 
 export default Navbar;

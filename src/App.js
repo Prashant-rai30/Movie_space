@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./container/LandingPage"
+import LandingPage from "./container/LandingPage/LandingPage"
 import './App.css';
-import SignIn from "./container/SignIn/SignIn"
-
+import SignInPage from "./container/SignInPage/SignInPage"
+import HomePage from "../src/container/HomePage/HomePage"
+import { useState } from "react";
 //Ternary operator 
 //normal operator
 //if else statement
@@ -15,15 +16,17 @@ import SignIn from "./container/SignIn/SignIn"
 
 
 function App() {
-  const isUserLoggedIn = false;
+  const [user, setUser] = useState(true)
   return (
     <BrowserRouter>
       <div className='App' >
         <Routes>
           {/* route gives 2 thngs path and element and is 2 step process */}
-          <Route path='/' element={isUserLoggedIn ? " " : <LandingPage />} />
-          <Route path='/sign-in' element={<SignIn />} />
+
+          <Route path="/" element={user ? <HomePage /> : <LandingPage />} />
+          <Route path="/signin-signup" element={<SignInPage />} />
         </Routes>
+
 
       </div>
     </BrowserRouter>
