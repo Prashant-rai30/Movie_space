@@ -1,14 +1,15 @@
-import React from 'react'
-import LandingPageContent from '../../components/LandingPageContent/LandingPageContent'
-import Navbar from '../../components/Navbar/Navbar'
+import React from "react";
+import "./LandingPage.css";
+import Navbar from "../../components/Navbar/Navbar";
+import LandingPageContent from "../../components/LandingPageContent/LandingPageContent";
 
 function LandingPage() {
   return (
-    <div>
-        <Navbar />
-        <LandingPageContent />
+    <div className="landingpage_container">
+      <Navbar />
+      <LandingPageContent />
     </div>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;

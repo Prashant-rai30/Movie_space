@@ -2,21 +2,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 5%;
-    border-bottom: 2px solid white;
+    background-color: #E0FFFF;
+    padding: 0 2%;
+    border-bottom: 1px solid #ADD8E6;
 }
-.navbar_container > img {
-    height: 50px;
+.navbar_logo {
+    width: 48px;
+    padding: 5px;
 }
-.navbar_container > button {
-    background-color: black;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: aqua;
-    font-weight: 700;
+.navbar_logo2{
+    width: 40px;
+    float: right;
+    margin: 10px 10px;
+    border-radius: 38%;
+    cursor: pointer;
 }
-.navbar_inputfield > input {
-    width: 200px;
-    padding: 4px 6px;
+.right{
+    float: right;
+    display: flex;
+    align-items: center;
+    margin: 10 0px;
 }
